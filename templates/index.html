@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mental Health Text Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Mental Health Text Classification</h1>
+        <form method="POST">
+            <textarea name="sentence" placeholder="Enter your sentence here..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Predicted Class: <span>{{ prediction }}</span></h2>
+            <h3>Probabilities:</h3>
+            <ul>
+                {% for label, prob in probs.items() %}
+                <li>{{ label }} : {{ prob }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

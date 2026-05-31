@@ -1,0 +1,17 @@
+# Core data science libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# TensorFlow (includes Keras layers)
+tensorflow
+
+# Flask for web app
+Flask
+Jinja2
+Werkzeug
+itsdangerous
+click
+MarkupSafe
